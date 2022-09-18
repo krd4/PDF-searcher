@@ -10,6 +10,13 @@ defmodule PdfSearcher.CLI do
 
         case parse do
             { [ help: true ] } -> :help
+            _ -> :help
         end
+    end
+
+    def process(:help) do
+        IO.puts("""
+        usage: pdf_search <keyword>
+        """)
     end
 end
